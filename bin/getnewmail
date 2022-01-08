@@ -1,0 +1,12 @@
+#! /bin/sh -e
+
+set -euo pipefail
+IFS=$'\n\t'
+
+# Kill any running processes
+if pgrep -x mbsync; then
+  pkill -x mbsync
+fi
+
+# Fetch new mail
+mbsync fastmail

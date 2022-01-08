@@ -1,0 +1,37 @@
+#! /bin/env bash
+
+# make gpg and git configs
+gpg2 -k # this should initialize the .gnupg folder?
+
+read -r -d '' gpg_config << EOM
+default-cache-ttl 86400
+max-cache-ttl 86400
+default-cache-ttl-ssh 86400
+max-cache-ttl-ssh 86400
+enable-ssh-support
+pinentry-program /usr/bin/pinentry-gtk-2
+EOM
+
+read -r -d '' git_config << EOM
+[user]
+	name =
+	email =
+	signingkey = 
+
+[commit]
+	gpgsign = true
+
+[gpg]
+	program = gpg
+EOM
+
+if ! [ -f "~/.gitconfig" ]; then
+    echo "$git_config" > $HOME/.gitconfig
+    echo "Git configured. Complete the information in ~/.gitconfig"
+fi    
+
+if ! [ -f "~/.gnupg/gpg-agent.conf" ]; then
+   echo "$gpg_config" > $HOME/.gnupg/gpg-agent.conf 
+   echo "use-agent" > $HOME/.gnupg/config
+   echo "gpg configured. Add ssh keygrip to ~/.gnupg/sshcontrol"
+fi

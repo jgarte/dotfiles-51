@@ -1,0 +1,6 @@
+#! /bin/sh
+
+mount /dev/sda1 /mnt/system
+mount /dev/sdb1 /mnt/usb
+
+rsync -aAXv --delete --exclude="lost+found" /mnt/usb/ /mnt/system/

@@ -1,0 +1,17 @@
+#! /bin/sh
+#
+# Low battery notifier for OpenBSD. 
+# Minutes to hibernate is based on my system hibernating @ 7%. 
+# Usage: Call it every few minutes with a cron job. 
+
+export DISPLAY=:0
+
+[[ 1 = $(apm -a) ]] && exit
+
+battery=$(apm -l)
+remaining=$(apm -m)
+minutes_to_hibernate="$((remaining * (battery - 7) / battery))" # fix this
+
+[[ $battery -lt 15 ]] && notify-send -i battery -u critical "battery critical: $battery% [hibernating in: $minutes_to_hibernate minutes]" && exit
+
+[[ $battery -lt 25 ]] && notify-send -i battery "battery low: $battery% [hibernating in $minutes_to_hibernate minutes]" && exit

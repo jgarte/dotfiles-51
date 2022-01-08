@@ -1,0 +1,7 @@
+#! /bin/sh
+
+export GIT_DIR=$HOME/.dotfiles
+export GIT_WORK_TREE=$HOME
+
+git pull git@github.com:jsbmg/dfiles 
+git checkout --force # overwrite existing files

@@ -1,0 +1,18 @@
+#! /bin/sh 
+# 
+# Fuzzy finder for pass using fzf.
+#
+# I call it with `xterm -e` in my cwm configuration.
+#
+# Bindings:
+#     Control-p: copy password to clipboard
+#     Control-u: copy username to clipboard
+#
+# Assumes first line of pass entry is password, and second is username.
+
+PASSWORD_STORE=~/.password-store
+cd $PASSWORD_STORE 
+
+rg --files | rg .gpg -r "" | fzf --delimiter / --with-nth -1 \
+    --bind "ctrl-p:execute*nohup pass -c {} >/dev/null 2>&1*+abort" \
+    --bind "ctrl-u:execute*nohup pass -c2 {} >/dev/null 2>&1*+abort"
