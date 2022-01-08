@@ -1,0 +1,25 @@
+command term "/usr/X11R6/bin/xterm"
+command firefox "firefox"
+
+sticky yes
+autogroup 2 "Firefox"
+
+unbind-key M-j
+unbind-key M-k
+
+bind-key MS-Return  "/usr/X11R6/bin/xterm" 
+bind-key MS-f       "/usr/local/bin/python3 /usr/local/bin/anki"
+bind-key CM-p       "/usr/X11R6/bin/xterm -geometry 40x10-0+0 -e fzf-pass" 
+bind-key M-r        window-raise
+bind-key M-v        window-vtile
+bind-key 4-h        "winmove left"
+bind-key 4-l        "winmove right"
+bind-key M-1        group-only-1
+bind-key M-2        group-only-2
+bind-key M-3        group-only-3
+bind-key M-4        group-only-4
+bind-key MS-1       window-movetogroup-1
+bind-key MS-2       window-movetogroup-2
+bind-key MS-3       window-movetogroup-3
+bind-key MS-4       window-movetogroup-4
+bind-key MS-5       window-movetogroup-5

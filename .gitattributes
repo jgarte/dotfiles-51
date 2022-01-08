@@ -1,0 +1,8 @@
+.mbsyncrc filter=git-crypt diff=git-crypt
+.config/mutt/* filter=git-crypt diff=git-crypt
+.config/snownews/urls.opml filter=git-crypt diff=git-crypt
+.config/msmtp/* filter=git-crypt diff=git-crypt
+.config/mist/* filter=git-crypt diff=git-crypt
+.config/vdirsyncer/* filter=git-crypt diff=git-crypt
+.config/khal/* filter=git-crypt diff=git-crypt
+.mblaze/* filter=git-crypt diff=git-crypt
