@@ -9,7 +9,7 @@ unbind-key M-k
 
 bind-key MS-Return  "/usr/X11R6/bin/xterm" 
 bind-key MS-f       "/usr/local/bin/python3 /usr/local/bin/anki"
-bind-key CM-p       "/usr/X11R6/bin/xterm -geometry 40x10-0+0 -e fzf-pass" 
+bind-key MS-p       "/usr/X11R6/bin/xterm -geometry 40x10-0+0 -e fzf-pass" 
 bind-key M-r        window-raise
 bind-key M-v        window-vtile
 bind-key 4-h        "winmove left"
