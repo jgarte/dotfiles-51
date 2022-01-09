@@ -3,5 +3,7 @@
 export GIT_DIR=$HOME/.dotfiles
 export GIT_WORK_TREE=$HOME
 
-git pull git@github.com:jsbmg/dfiles 
-git checkout --force # overwrite existing files
+echo "Warning: will overwrite existing files. Continue? Y/n"
+[[ $(read answer) != @(Y|y|yes) ]] && exit  
+echo "Continued"
+# git checkout --force # will overwrite existing files
