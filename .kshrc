@@ -14,7 +14,7 @@ else
 fi
 
 if [ "$HOSTNAME" = dev ]; then      
-    export BROWSER="qvm-run-in-dvm"
+    export BROWSER="qvm-open-in-dvm"
     export SSH_AUTH_SOCK=/run/user/1000/SSHAgent
     export PASSWORD_STORE_ENABLE_EXTENSIONS=true
 else
