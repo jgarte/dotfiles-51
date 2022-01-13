@@ -9,3 +9,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 call plug#end()
+
+:nnoremap <C-s> :BLines<Return>
+:nnoremap <C-k> :Files<Return>
