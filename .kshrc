@@ -22,6 +22,9 @@ else
     gpgconf --launch gpg-agent
 fi
 
+
+[[ "$OSTYPE" == "linux-gnu" ]] && alias ls='ls -ahF --color=auto' || alias ls='ls -ahF'
+
 alias anki="/usr/local/bin/python3 anki"
 alias cr='cargo run --'
 alias d='pwd'
@@ -36,7 +39,6 @@ alias gd="git diff"
 alias gl="git log --graph --decorate --oneline --all"
 alias gp="git push"
 alias gs="git status"
-alias ls='ls -ahF'
 alias mut='mbsync -a && mutt'
 alias nv='nvim'
 alias p3="python3"
