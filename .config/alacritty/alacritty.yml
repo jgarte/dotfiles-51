@@ -1,4 +1,4 @@
-background_opacity: 0.91
+background_opacity: 0.90 
 
 font:
   normal:
@@ -10,9 +10,41 @@ font:
   italic:
     family: DejaVu Sans Mono
     style: Italic 
-  size: 11.0
+  size: 7.0
 
-colors:
+scheme: &srcery
+    primary:
+      background: '#1c1b19'
+      foreground: '#fce8c3'
+
+    # Cursor colors
+    cursor:
+      text: CellBackground
+      cursor: '#fbb829'
+
+    # Normal colors
+    normal:
+      black:   '#1c1b19'
+      red:     '#ef2f27'
+      green:   '#519f50'
+      yellow:  '#fbb829'
+      blue:    '#2c78bf'
+      magenta: '#e02c6d'
+      cyan:    '#0aaeb3'
+      white:   '#baa67f'
+
+    # Bright colors
+    bright:
+      black:   '#918175'
+      red:     '#f75341'
+      green:   '#98bc37'
+      yellow:  '#fed06e'
+      blue:    '#68a8e4'
+      magenta: '#ff5c8f'
+      cyan:    '#2be4d0'
+      white:   '#fce8c3'
+
+scheme: &glownight
     primary:
         background: '#0F111A'
         foreground: '#8F93A2'
@@ -34,3 +66,5 @@ colors:
         magenta: '#C792EA'
         cyan: '#89DDFF'
         white: '#8F93A2'
+
+colors: *srcery
