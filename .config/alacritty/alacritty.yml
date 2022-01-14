@@ -1,4 +1,4 @@
-background_opacity: 0.90 
+background_opacity: 0.90
 
 font:
   normal:
@@ -9,62 +9,49 @@ font:
     style: Regular
   italic:
     family: DejaVu Sans Mono
-    style: Italic 
+    style: Italic
   size: 7.0
 
-scheme: &srcery
-    primary:
-      background: '#1c1b19'
-      foreground: '#fce8c3'
+colors:
+  # Default colors
+  primary:
+    background: '0xffffff'
+    foreground: '0x000000'
 
-    # Cursor colors
-    cursor:
-      text: CellBackground
-      cursor: '#fbb829'
+  # Colors the cursor will use if `custom_cursor_colors` is true
+  cursor:
+    text: '0xffffff'
+    cursor: '0x000000'
 
-    # Normal colors
-    normal:
-      black:   '#1c1b19'
-      red:     '#ef2f27'
-      green:   '#519f50'
-      yellow:  '#fbb829'
-      blue:    '#2c78bf'
-      magenta: '#e02c6d'
-      cyan:    '#0aaeb3'
-      white:   '#baa67f'
+  # Normal colors
+  normal:
+    black:   '0x000000'
+    red:     '0xb21818'
+    green:   '0x18b218'
+    yellow:  '0xb26818'
+    blue:    '0x1818b2'
+    magenta: '0xb218b2'
+    cyan:    '0x18b2b2'
+    white:   '0xb2b2b2'
 
-    # Bright colors
-    bright:
-      black:   '#918175'
-      red:     '#f75341'
-      green:   '#98bc37'
-      yellow:  '#fed06e'
-      blue:    '#68a8e4'
-      magenta: '#ff5c8f'
-      cyan:    '#2be4d0'
-      white:   '#fce8c3'
+  # Bright colors
+  bright:
+    black:   '0x686868'
+    red:     '0xff5454'
+    green:   '0x00aa00'
+    yellow:  '0xffa061'
+    blue:    '0x5454ff'
+    magenta: '0xff64ff'
+    cyan:    '0x54ffff'
+    white:   '0xffffff'
 
-scheme: &glownight
-    primary:
-        background: '#0F111A'
-        foreground: '#8F93A2'
-    normal:
-        black: '#0F111A'
-        red: '#FF5370'
-        green: '#99C794'
-        yellow: '#C4E88D'
-        blue: '#82AAFF'
-        magenta: '#C792EA'
-        cyan: '#89DDFF'
-        white: '#464B5D'
-    bright:
-        black: '#0F111A'
-        red: '#FF5370'
-        green: '#99C794'
-        yellow: '#C4E88D'
-        blue: '#82AAFF'
-        magenta: '#C792EA'
-        cyan: '#89DDFF'
-        white: '#8F93A2'
-
-colors: *srcery
+  # Dim colors (Optional)
+  dim:
+    black:   '0x000000'
+    red:     '0xb21818'
+    green:   '0x18b218'
+    yellow:  '0xb26818'
+    blue:    '0x1818b2'
+    magenta: '0xb218b2'
+    cyan:    '0x18b2b2'
+    white:   '0xb2b2b2'
