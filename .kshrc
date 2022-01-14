@@ -7,7 +7,7 @@ export TERMINAL="xterm"
 export TTY=$(tty)
 export EDITOR="nvim"
 
-if [ "$HOSTNAME" = dev ]; then      
+if [ "$HOSTNAME" = dev ]; then
     export BROWSER="qvm-open-in-dvm"
     export SSH_AUTH_SOCK=/run/user/1000/SSHAgent
     export PASSWORD_STORE_ENABLE_EXTENSIONS=true
@@ -16,13 +16,17 @@ else
     gpgconf --launch gpg-agent
 fi
 
-[[ "$OSTYPE" == "linux-gnu" ]] && alias ls='ls -ahF --color=auto' || alias ls='ls -ahF'
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    alias ls='ls -ahF --color=auto'
+else
+    alias ls='ls -ahF'
+fi
 
 alias anki="/usr/local/bin/python3 anki"
 alias cr='cargo run --'
 alias d='pwd'
 alias diff='colordiff'
-alias dot="GIT_WORK_TREE=~ GIT_DIR=~/.dotfiles" 
+alias dot="GIT_WORK_TREE=~ GIT_DIR=~/.dotfiles"
 alias g="git"
 alias ga="git add"
 alias gaf="git add -f"
@@ -33,14 +37,14 @@ alias gl="git log --graph --decorate --oneline --all"
 alias gp="git push"
 alias gs="git status"
 alias mut='mbsync -a && mutt'
-alias nv='nvim'
+alias vi='nvim'
 alias p3="python3"
 alias tm="tmux"
 alias todo="cat -n $HOME/.todo"
 
 eval "$(pyenv init --path)"
 
-set -o vi 
+set -o vi
 export PS1="\[\e[0;36m\]\$\[\e[m\] "
 PROMPT_COMMAND=${PROMPT_COMMAND:+$PROMPT_COMMAND; \
-    }'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
+}'printf "\033]0;%s@%s:%s\007" "${USER}" "${HOSTNAME%%.*}" "${PWD/#$HOME/\~}"'
