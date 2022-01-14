@@ -5,13 +5,7 @@ export MAILDIR="$HOME/.mail"
 export PATH="$HOME/.pyenv/bin:$PATH"
 export TERMINAL="xterm"
 export TTY=$(tty)
-
-if command -v nvi > /dev/null 2>&1; then     
-    export EDITOR="nvi"	
-    alias vi="$(command -v nvi)"
-else
-    export EDITOR="vi"
-fi
+export EDITOR="nvim"
 
 if [ "$HOSTNAME" = dev ]; then      
     export BROWSER="qvm-open-in-dvm"
@@ -21,7 +15,6 @@ else
     export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
     gpgconf --launch gpg-agent
 fi
-
 
 [[ "$OSTYPE" == "linux-gnu" ]] && alias ls='ls -ahF --color=auto' || alias ls='ls -ahF'
 
