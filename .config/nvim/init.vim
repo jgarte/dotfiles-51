@@ -7,10 +7,13 @@ set background=light
 colorscheme summerfruit256
 
 set expandtab
+set incsearch
 set number
 set clipboard+=unnamedplus
 set synmaxcol=200
 set scrolloff=10
+set tabstop=4
+set shiftwidth=4
 
 " Strip trailing whitespace on every save.
 fun! StripTrailingWhitespace()
