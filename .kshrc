@@ -1,5 +1,5 @@
 export BROWSER="firefox"
-export FZF_DEFAULT_COMMAND='rg --files --hidden'
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob=!.git/'
 export GPG_TTY=$(tty)
 export MAILDIR="$HOME/.mail"
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -38,6 +38,7 @@ alias gp="git push"
 alias gs="git status"
 alias mut='mbsync -a && mutt'
 alias vi='nvim'
+alias nv='nvim' # alas, muscle memory
 alias pass="EDITOR=nvim --noplugin pass"
 alias p3="python3"
 alias tm="tmux"
