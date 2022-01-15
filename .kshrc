@@ -23,6 +23,7 @@ else
 fi
 
 alias anki="/usr/local/bin/python3 anki"
+alias cal="khal calendar"
 alias cr='cargo run --'
 alias d='pwd'
 alias diff='colordiff'
