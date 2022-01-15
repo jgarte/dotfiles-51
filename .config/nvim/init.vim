@@ -18,10 +18,12 @@ fun! StripTrailingWhitespace()
   let c = col(".")
   %s/\s\+$//e
   call cursor(l, c)
+
 endfun
 autocmd BufWritePre * :call StripTrailingWhitespace()
 
 nnoremap <ESC><ESC> :nohlsearch<CR>
+noremap Q :put=''<CR>
 
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
