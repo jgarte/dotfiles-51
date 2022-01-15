@@ -8,9 +8,9 @@ borderwidth 0
 unbind-key M-j
 unbind-key M-k
 
-bind-key MS-Return  "/home/jordan/.cargo/bin/alacritty" 
+bind-key MS-Return  "/home/jordan/.cargo/bin/alacritty"
 bind-key MS-f       "/usr/local/bin/python3 /usr/local/bin/anki"
-bind-key MS-p       "/usr/X11R6/bin/xterm -geometry 40x10-0+0 -e fzf-pass" 
+bind-key MS-p       "/usr/X11R6/bin/xterm -geometry 40x10-0+0 -e fzf-pass"
 bind-key CM-b       "/usr/local/bin/feh --randomize --bg-fill /home/jordan/wallpaper"
 bind-key M-r        window-raise
 bind-key M-v        window-vtile
