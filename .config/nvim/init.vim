@@ -1,5 +1,5 @@
-highlight VertSplit cterm=NONE
-set fillchars+=vert:\▏
+" highlight VertSplit cterm=NONE
+" set fillchars+=vert:\▏
 
 set termguicolors
 set colorcolumn=80
@@ -14,6 +14,10 @@ set synmaxcol=200
 set scrolloff=10
 set tabstop=4
 set shiftwidth=4
+set softtabstop=4
+set textwidth=0
+set formatoptions=tcro
+set autoindent
 
 " Strip trailing whitespace on every save.
 fun! StripTrailingWhitespace()
@@ -31,6 +35,7 @@ noremap Q :put=''<CR>
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-:nnoremap <C-s> :BLines<Return>
-:nnoremap <C-k> :Files<Return>
+:nnoremap <Leader>r :Rg<CR>
+:nnoremap <Leader>f :Files<CR>
+:nnoremap <Leader>l :BLines<CR>
 call plug#end()
