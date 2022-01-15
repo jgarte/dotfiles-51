@@ -1,0 +1,10 @@
+[user]
+        email = hello@jordandsweet.com
+        name = Jordan Sweet
+        signingkey = hello@jordandsweet.com
+[commit]
+        gpgsign = true
+[merge]
+        ff = only
+[pull]
+        rebase = true
