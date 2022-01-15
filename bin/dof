@@ -11,4 +11,4 @@ export GIT_DIR=~/.dotfiles
 file=$(git ls-tree -r master --name-only | \
        grep -v .git-crypt/keys | fzf) || return
 
-vi $file
+$EDITOR $file
