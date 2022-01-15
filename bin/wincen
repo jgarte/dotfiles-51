@@ -1,0 +1,19 @@
+#! /bin/sh -e
+#
+# Center active window horizontally and vertically
+
+scrnDims=$(xdpyinfo | \
+       awk '/dimensions/ {print $2}' | \
+       sed 's/x/ /')
+scrnWidth=$(echo "$scrnDims" | awk '{print $1}')
+scrnHeight=$(echo "$scrnDims" | awk '{print $2}')
+
+win=$(xdotool getactivewindow)
+winGeom=$(xdotool getwindowgeometry --shell $win)
+winWidth=$(echo $winGeom | awk '{print $4}' | sed 's/WIDTH=//')
+winHeight=$(echo $winGeom | awk '{print $5}' | sed 's/HEIGHT=//')
+
+xOffset="$(( ($scrnWidth - $winWidth ) / 2 ))"
+yOffset="$(( ($scrnHeight - $winHeight ) / 2 ))"
+
+xdotool windowmove $win $xOffset $yOffset
