@@ -2,13 +2,13 @@ background_opacity: 0.90
 
 font:
   normal:
-    family: DejaVu Sans Mono
+    family: Hack 
     style: Regular
   bold:
-    family: DejaVu Sans Mono
+    family: Hack 
     style: Regular
   italic:
-    family: DejaVu Sans Mono
+    family: Hack 
     style: Italic
   size: 7.0
 
