@@ -38,6 +38,7 @@ alias gp="git push"
 alias gs="git status"
 alias mut='mbsync -a && mutt'
 alias vi='nvim'
+alias pass="EDITOR=nvim --noplugin pass"
 alias p3="python3"
 alias tm="tmux"
 alias todo="cat -n $HOME/.todo"
