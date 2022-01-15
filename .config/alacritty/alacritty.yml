@@ -1,57 +1,45 @@
-background_opacity: 0.90
-
 font:
   normal:
-    family: Hack 
+    family: Hack
     style: Regular
   bold:
-    family: Hack 
+    family: Hack
     style: Regular
   italic:
-    family: Hack 
+    family: Hack
     style: Italic
-  size: 7.0
+  size: 8
 
 colors:
   # Default colors
   primary:
     background: '0xffffff'
-    foreground: '0x000000'
+    foreground: '0x101010'
 
   # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
     text: '0xffffff'
-    cursor: '0x000000'
+    cursor: '0x101010'
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xb21818'
-    green:   '0x18b218'
-    yellow:  '0xb26818'
-    blue:    '0x1818b2'
-    magenta: '0xb218b2'
-    cyan:    '0x18b2b2'
-    white:   '0xb2b2b2'
+    black:   '0xffffff'
+    red:     '0xff0086'
+    green:   '0x00c918'
+    yellow:  '0xaba800'
+    blue:    '0x3777e6'
+    magenta: '0xad00a1'
+    cyan:    '0x1faaaa'
+    white:   '0x101010'
 
   # Bright colors
   bright:
-    black:   '0x686868'
-    red:     '0xff5454'
-    green:   '0x00aa00'
-    yellow:  '0xffa061'
-    blue:    '0x5454ff'
-    magenta: '0xff64ff'
-    cyan:    '0x54ffff'
-    white:   '0xffffff'
+    black:   '0xb0b0b0'
+    red:     '0xfd8900'
+    green:   '0xe0e0e0'
+    yellow:  '0xd0d0d0'
+    blue:    '0x000000'
+    magenta: '0x151515'
+    cyan:    '0xcc6633'
+    white:   '0x202020'
 
-  # Dim colors (Optional)
-  dim:
-    black:   '0x000000'
-    red:     '0xb21818'
-    green:   '0x18b218'
-    yellow:  '0xb26818'
-    blue:    '0x1818b2'
-    magenta: '0xb218b2'
-    cyan:    '0x18b2b2'
-    white:   '0xb2b2b2'
