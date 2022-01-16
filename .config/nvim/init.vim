@@ -1,6 +1,3 @@
-" highlight VertSplit cterm=NONE
-" set fillchars+=vert:\▏
-
 set termguicolors
 set colorcolumn=80
 set background=light
