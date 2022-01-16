@@ -1,6 +1,9 @@
 #! /bin/sh -e
 #
 # Center active window horizontally and vertically
+#
+# if arg is a number the window will scale to that size of the screen
+
 
 scrnDims=$(xdpyinfo | \
        awk '/dimensions/ {print $2}' | \
@@ -9,9 +12,16 @@ scrnWidth=$(echo "$scrnDims" | awk '{print $1}')
 scrnHeight=$(echo "$scrnDims" | awk '{print $2}')
 
 win=$(xdotool getactivewindow)
-winGeom=$(xdotool getwindowgeometry --shell $win)
-winWidth=$(echo $winGeom | awk '{print $4}' | sed 's/WIDTH=//')
-winHeight=$(echo $winGeom | awk '{print $5}' | sed 's/HEIGHT=//')
+
+if ! [[ -z "$1" ]]; then
+    winWidth=$(printf "%.0f\n" $(echo "$scrnWidth * $1" | bc))
+    winHeight=$(printf "%.0f\n" $(echo "$scrnHeight * $1" | bc))
+    xdotool windowsize $win $winWidth $winHeight
+else
+    winGeom=$(xdotool getwindowgeometry --shell $win)
+    winWidth=$(echo $winGeom | awk '{print $4}' | sed 's/WIDTH=//')
+    winHeight=$(echo $winGeom | awk '{print $5}' | sed 's/HEIGHT=//')
+fi
 
 xOffset="$(( ($scrnWidth - $winWidth ) / 2 ))"
 yOffset="$(( ($scrnHeight - $winHeight ) / 2 ))"
