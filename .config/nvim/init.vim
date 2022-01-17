@@ -15,6 +15,9 @@ set softtabstop=4
 set textwidth=0
 set formatoptions=tcro
 set autoindent
+set nobackup
+set nowritebackup
+
 
 " Strip trailing whitespace on every save.
 fun! StripTrailingWhitespace()
@@ -32,6 +35,7 @@ noremap Q :put=''<CR>
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 :nnoremap <Leader>r :Rg<CR>
 :nnoremap <Leader>f :Files<CR>
 :nnoremap <Leader>l :BLines<CR>
