@@ -39,7 +39,7 @@ alias gp="git push"
 alias gs="git status"
 alias mut='mbsync -a && mutt'
 alias nvi='nvim' # alas, muscle memory
-alias pass="EDITOR=nvim --noplugin pass"
+alias pass="EDITOR='nvim --noplugin' pass"
 alias p3="python3"
 alias pr="poetry run"
 alias tm="tmux"
