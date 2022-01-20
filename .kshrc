@@ -3,7 +3,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --glob=!.git/'
 export GPG_TTY=$(tty)
 export MAILDIR="$HOME/.mail"
 export PATH="$HOME/.pyenv/bin:$PATH"
-export TERMINAL="xterm"
+export TERMINAL="alacritty"
 export TTY=$(tty)
 export EDITOR="nvim"
 
@@ -38,10 +38,10 @@ alias gl="git log --graph --decorate --oneline --all"
 alias gp="git push"
 alias gs="git status"
 alias mut='mbsync -a && mutt'
-alias vi='nvim'
-alias nv='nvim' # alas, muscle memory
+alias nvi='nvim' # alas, muscle memory
 alias pass="EDITOR=nvim --noplugin pass"
 alias p3="python3"
+alias pr="poetry run"
 alias tm="tmux"
 alias todo="cat -n $HOME/.todo"
 
