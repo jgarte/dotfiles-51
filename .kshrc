@@ -38,7 +38,8 @@ alias gl="git log --graph --decorate --oneline --all"
 alias gp="git push"
 alias gs="git status"
 alias mut='mbsync -a && mutt'
-alias nvi='nvim' # alas, muscle memory
+alias vi='nvim'
+alias nvi='vi'
 alias pass="EDITOR='nvim --noplugin' pass"
 alias p3="python3"
 alias pr="poetry run"
