@@ -1,0 +1,8 @@
+#! /bin/sh -e
+
+if pgrep -x vdirsyncer;
+then
+    pkill -x vdirsyncer;
+fi
+
+vdirsyncer sync
