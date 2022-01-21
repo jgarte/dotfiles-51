@@ -4,8 +4,10 @@ export LC_CTYPE="en_US.UTF-8"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
 setxkbmap -option ctrl:nocaps &
-pkill xcape
-xcape &
+if ! pgrep -x xcape >/dev/null 2>&1 ; then
+    xcape &
+fi
+
 xrdb -merge ~/.Xresources &
 unclutter -idle 1 -noevents &
 xidle -delay 5 -nw \
@@ -14,5 +16,6 @@ xidle -delay 5 -nw \
         -timeout 1800 &
 hsetroot -solid "#9eb8d3" &
 redshift -l 32.7:-117 &
+conky -c $HOME/.config/conky/conky.conf &
 picom -c &
-exec cwm
+exec bspwm
