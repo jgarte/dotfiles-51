@@ -4,7 +4,7 @@ font:
     style: Regular
   bold:
     family: SF Mono
-    style: Regular
+    style: Bold
   italic:
     family: SF Mono
     style: Italic
@@ -12,9 +12,10 @@ font:
 
 window:
   padding:
-    x: 2
-    y: 2
+    x: 4
+    y: 4
   dynamic_padding: true
+
 # Colors (Seagull)
 colors:
   # Default colors
